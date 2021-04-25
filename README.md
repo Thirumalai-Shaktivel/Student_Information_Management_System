@@ -34,7 +34,7 @@ The resulting system is able to:
     - View the Attendance details.
 
 ### RELATIONAL SCHEMA
-![Relational schema](https://github.com/Thirumalai-Shaktivel/Student-Information-Management-System/blob/main/image/ER%20Mapping.png)
+![Relational schema](image/ER%20Mapping.png)
 
 For screenshots and more details about the project, please checkout [Final Report](https://github.com/Thirumalai-Shaktivel/Student-Information-Management-System/blob/main/Final-Report.pdf)  
 ## Software Requirements
