@@ -36,9 +36,9 @@ The resulting system is able to:
 ### RELATIONAL SCHEMA
 ![Relational schema](image/ER%20Mapping.png)
 
-For screenshots and more details about the project, please checkout [Final Report](https://github.com/Thirumalai-Shaktivel/Student-Information-Management-System/blob/main/Final-Report.pdf)  
+For screenshots and more details about the project, please checkout [Final Report](Final-Report.pdf)  
 ## Software Requirements
 * [XAMPP](https://www.apachefriends.org/index.html) 
 * Browser of your choice
 
-If you have any doubt related to this project, feel free to contact me [twitter](https://twitter.com/sh0ck_thi) or [mail](mailto:thirumalaishaktivel@gmail.com) me.
+If you have any doubt related to this project, feel free to contact me on [twitter](https://twitter.com/sh0ck_thi) or [mail](mailto:thirumalaishaktivel@gmail.com) me.
