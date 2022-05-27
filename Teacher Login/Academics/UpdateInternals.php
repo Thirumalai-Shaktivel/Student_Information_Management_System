@@ -1,4 +1,4 @@
-<?php 
+<?php
 
     session_start();
     if(isset($_SESSION['username']) != true)
@@ -13,31 +13,33 @@
     // $query = mysqli_query($conn, $selectQuery);
     // while($res = mysqli_fetch_assoc($query)){
     //     $selectQuery = "SELECT * from `student_details`";
-    //     $query1 = mysqli_query($conn, $selectQuery); 
+    //     $query1 = mysqli_query($conn, $selectQuery);
     //     while($result = mysqli_fetch_assoc($query1)){
     //         $id = $result['Student ID'];
     //         $code = $res['Subject Code'];
     //         $insertQuery = "INSERT INTO `internals_marks`(`Student ID`, `Subject Code`) VALUES ('$id','$code')";
     //         $query2 = mysqli_query($conn, $insertQuery);
     //     }
-    // } 
+    // }
     if(isset($_POST['save1'])){
         $name = $_POST['IA1'];
-        $IA1 = IA1;
+        $IA1 = 'IA1';
     }
     else if(isset($_POST['save2'])){
         $name = $_POST['IA2'];
-        $IA1 = IA2;
+        $IA1 = 'IA2';
     }
     else if(isset($_POST['save3'])){
         $name = $_POST['IA3'];
-        $IA1 = IA3;
+        $IA1 = 'IA3';
     }
+
+    if(isset($_POST['save1']) || isset($_POST['save2']) || isset($_POST['save3'])) {
         $selectQuery = "SELECT * from subject_details";
         $query = mysqli_query($conn, $selectQuery);
         while($res = mysqli_fetch_assoc($query)){
             $selectQuery = "SELECT * from `student_details`";
-            $query1 = mysqli_query($conn, $selectQuery); 
+            $query1 = mysqli_query($conn, $selectQuery);
             while($result = mysqli_fetch_assoc($query1)){
                 if(@$name[$result['Student ID']][$res['Subject Code']] != null){
                     $id = $result['Student ID'];
@@ -50,14 +52,15 @@
                     }
                 }
             }
-        } 
+        }
+    }
     // else if(isset($_POST['save2'])){
     //     $name = $_POST['IA2'];
     //     $selectQuery = "SELECT * from subject_details";
     //     $query = mysqli_query($conn, $selectQuery);
     //     while($res = mysqli_fetch_assoc($query)){
     //         $selectQuery = "SELECT * from `student_details`";
-    //         $query1 = mysqli_query($conn, $selectQuery); 
+    //         $query1 = mysqli_query($conn, $selectQuery);
     //         while($result = mysqli_fetch_assoc($query1)){
     //             if(@$name[$result['Student ID']][$res['Subject Code']] != null){
     //                 $id = $result['Student ID'];
@@ -70,7 +73,7 @@
     //                 }
     //             }
     //         }
-    //     } 
+    //     }
     // }
     // else if(isset($_POST['save3'])){
     //     $name = $_POST['IA3'];
@@ -78,7 +81,7 @@
     //     $query = mysqli_query($conn, $selectQuery);
     //     while($res = mysqli_fetch_assoc($query)){
     //         $selectQuery = "SELECT * from `student_details`";
-    //         $query1 = mysqli_query($conn, $selectQuery); 
+    //         $query1 = mysqli_query($conn, $selectQuery);
     //         while($result = mysqli_fetch_assoc($query1)){
     //             if(@$name[$result['Student ID']][$res['Subject Code']] != null){
     //                 $id = $result['Student ID'];
@@ -91,7 +94,7 @@
     //                 }
     //             }
     //         }
-    //     } 
+    //     }
     // }
 
 ?>
@@ -112,11 +115,11 @@
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <button class="btn btn-link btn order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
         <a class="navbar-brand" href="../HomePage.php">Teacher</a>
-        
+
         <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0"></form>
         <ul class="navbar-nav ml-auto ml-md-0">
             <a class="nav-link dropdown-toggle" id="userDropdown" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle fa-lg"></i>
-                <?php 
+                <?php
                     echo($username)
                 ?>
             </a>
@@ -128,7 +131,7 @@
             </div>
         </ul>
     </nav>
-  
+
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
             <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion">
@@ -201,7 +204,7 @@
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Logged in as:</div>
-                    <?php 
+                    <?php
                         echo($username)
                     ?>
                 </div>
@@ -306,11 +309,11 @@
                                             </thead>
                                             <tbody>
                                             <tbody>
-                                                <?php 
+                                                <?php
                                                     $selectQuery = "SELECT * from `student_details`";
-                                                    $query = mysqli_query($conn, $selectQuery); 
-                                                    while($result = mysqli_fetch_assoc($query)){ 
-                                                ?> 
+                                                    $query = mysqli_query($conn, $selectQuery);
+                                                    while($result = mysqli_fetch_assoc($query)){
+                                                ?>
                                                 <tr class="">
                                                     <td><?php echo $result['Student ID']; ?></td>
                                                     <td><?php echo $result['Name']; ?></td>
@@ -319,12 +322,12 @@
                                                     $code = $res['Subject Code'];
 
                                                     $selectQuery1 = "SELECT * from `internals_marks` WHERE `Student ID` = '$ID' AND `Subject Code` ='$code'";
-                                                    $query1 = mysqli_query($conn, $selectQuery1); 
+                                                    $query1 = mysqli_query($conn, $selectQuery1);
                                                     $result = mysqli_fetch_assoc($query1);
                                                 ?>
                                                 <?php if($id == 'IA1') {?>
                                                     <td>
-                                                        <input type="number" name="IA1[<?php echo $ID;?>][<?php echo $code;?>]" class="form-control" value="<?php echo @$result['IA1']; ?>"> 
+                                                        <input type="number" name="IA1[<?php echo $ID;?>][<?php echo $code;?>]" class="form-control" value="<?php echo @$result['IA1']; ?>">
                                                     </td>
                                                 <?php } else{ ?>
                                                     <td>
@@ -340,15 +343,15 @@
                                                     </td>
                                                 <?php } if($id == 'IA3') {?>
                                                     <td>
-                                                        <input type="number" name="IA3[<?php echo $ID;?>][<?php echo $code;?>]" class="form-control" value="<?php echo @$result['IA3']; ?>">  
+                                                        <input type="number" name="IA3[<?php echo $ID;?>][<?php echo $code;?>]" class="form-control" value="<?php echo @$result['IA3']; ?>">
                                                     </td>
                                                 <?php } else{ ?>
                                                     <td>
                                                         <?php echo (@$result['IA3'] != null)? $result['IA3'] : "-"; ?>
                                                     </td>
                                                 <?php }
-                                                        if(@$result['IA1'] AND @$result['IA2'] AND @$result['IA3'] != NULL){
-                                                        $Average = round((@$result['IA1'] + @$result['IA2'] + @$result['IA3'])/3); 
+                                                        if((@$result['IA1'] AND @$result['IA2'] AND @$result['IA3']) != NULL){
+                                                        $Average = round((@$result['IA1'] + @$result['IA2'] + @$result['IA3'])/3);
 
                                                         $insert = "UPDATE `internals_marks` SET `Average` = $Average WHERE `Student ID` = '$ID' AND `Subject Code` ='$code'";
                                                         $query3 = mysqli_query($conn, $insert);
@@ -356,14 +359,14 @@
                                                 ?>
                                                     <td><?php echo @$result['Average']; ?></td>
                                                 </tr>
-                                                
+
                                                 <?php
 
                                                     }
                                                 ?>
 
                                             </tbody>
-                                        </form>    
+                                        </form>
                                         </table>
                                     </div>
                                 </div>
@@ -374,7 +377,7 @@
                 </div>
             </main>
         </div>
-    </div>  
+    </div>
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
