@@ -174,10 +174,10 @@ include "../config.php";
                                                                 </tr>
                                                                 
                                                                 <tr>
-                                                                    <td>Addmission Number </td><td><?php echo ":\t".$result['Addmission Number'] ?></td>
+                                                                    <td>Admission Number </td><td><?php echo ":\t".$result['Admission Number'] ?></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>Addmission Date </td><td><?php echo ":\t".$result['Addmission Date'] ?></td>
+                                                                    <td>Admission Date </td><td><?php echo ":\t".$result['Admission Date'] ?></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>Religion </td><td><?php echo ":\t".$result['Religion'] ?></td>
@@ -225,7 +225,7 @@ include "../config.php";
                                 
                             </div>
                             <div class="text-center col-12">
-                                <img src="../image/Students.png" class="responsive" alt="Students">
+                                <img src="../image/students.png" class="responsive" alt="Students">
                             </div>
                         </div>
                         <div class="col">

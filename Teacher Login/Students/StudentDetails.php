@@ -218,10 +218,10 @@
                                                 </tr>
                                                 
                                                 <tr>
-                                                    <td>Addmission Number </td><td><?php echo ":\t".$result['Addmission Number'] ?></td>
+                                                    <td>Admission Number </td><td><?php echo ":\t".$result['Admission Number'] ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Addmission Date </td><td><?php echo ":\t".$result['Addmission Date'] ?></td>
+                                                    <td>Admission Date </td><td><?php echo ":\t".$result['Admission Date'] ?></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Religion </td><td><?php echo ":\t".$result['Religion'] ?></td>

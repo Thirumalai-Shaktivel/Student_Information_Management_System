@@ -46,7 +46,7 @@
             $input = format($_POST['DOB']);
             $dob = date("d M, Y",strtotime($input));
             $email = format($_POST['Email']);
-            $addNum = format($_POST['AdmNum']);
+            $admNum = format($_POST['AdmNum']);
             $input = format($_POST['AdmDate']);
             $addDate= date("Y-m-d",strtotime($input));
             $religion = format($_POST['religion']);
@@ -61,7 +61,7 @@
             $permAdd = mysqli_real_escape_string($conn, format($_POST['PmtAdd']));
 
             if(!(@$_SESSION['class'] || @$_SESSION['section'] || @$_SESSION['gender'])){
-                $insertQuery = "INSERT INTO `student_details`(`Student ID`, `Name`, `Class`, `Gender`, `Blood Group`, `DOB`, `Email`, `Addmission Number`, `Addmission Date`, `Religion`, `Nationality`, `Father Name`, `Father Occupation`, `Father PhoneNum`, `Mother Name`, `Mother Occupation`, `Mother PhoneNum`, `Present Address`, `Permanent Address`) VALUES ('$StudentId', '$name', '$class', '$gender', '$blood', '$dob', '$email', $addNum, '$addDate', '$religion', '$nationality', '$fatherName', '$fatherOcc', '$fatherNum', '$motherName', '$motherOcc', '$motherNum', '$prstAdd', '$permAdd')";
+                $insertQuery = "INSERT INTO `student_details`(`Student ID`, `Name`, `Class`, `Gender`, `Blood Group`, `DOB`, `Email`, `Admission Number`, `Admission Date`, `Religion`, `Nationality`, `Father Name`, `Father Occupation`, `Father PhoneNum`, `Mother Name`, `Mother Occupation`, `Mother PhoneNum`, `Present Address`, `Permanent Address`) VALUES ('$StudentId', '$name', '$class', '$gender', '$blood', '$dob', '$email', $admNum, '$addDate', '$religion', '$nationality', '$fatherName', '$fatherOcc', '$fatherNum', '$motherName', '$motherOcc', '$motherNum', '$prstAdd', '$permAdd')";
 
                 $query = mysqli_query($conn, $insertQuery);
 
@@ -314,11 +314,11 @@
                                             <input type="email" name="Email" class="form-control" id="Email" placeholder="Enter Email-ID *">
                                         </div>
                                         <div class="form-group col-md-3">
-                                            <label for="AdmissionNum">Addmission Number</label>
+                                            <label for="AdmissionNum">Admission Number</label>
                                             <input type="number" name="AdmNum" class="form-control" id="AdmNum" required>
                                         </div>
                                         <div class="form-group col-md-3">
-                                            <label for="AdmissionDate">Addmission Date</label>
+                                            <label for="AdmissionDate">Admission Date</label>
                                             <input type="date" name="AdmDate" class="form-control" id="AdmDate" required>
                                         </div>
                                     </div>

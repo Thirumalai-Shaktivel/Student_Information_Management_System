@@ -24,7 +24,7 @@
         $input = format($_POST['DOB']);
         $dob = date("d M, Y",strtotime($input));
         $email = format($_POST['Email']);
-        $addNum = format($_POST['AdmNum']);
+        $admNum = format($_POST['AdmNum']);
         $input = format($_POST['AdmDate']);
         $addDate= date("Y-m-d",strtotime($input));
         $religion = format($_POST['religion']);
@@ -38,7 +38,7 @@
         $prstAdd = mysqli_real_escape_string($conn, format($_POST['PresentAdd']));
         $permAdd = mysqli_real_escape_string($conn, format($_POST['PmtAdd']));
 
-        $insertQuery = "UPDATE `student_details` SET `Name`='$name', `Class`='$class', `Gender`='$gender', `Blood Group`='$blood', `DOB`='$dob', `Email`='$email', `Addmission Number`=$addNum, `Addmission Date`='$addDate', `Religion`='$religion', `Nationality`='$nationality', `Father Name`='$fatherName', `Father Occupation`='$fatherOcc', `Father PhoneNum`='$fatherNum', `Mother Name`='$motherName', `Mother Occupation`='$motherOcc', `Mother PhoneNum`='$motherNum', `Present Address`='$prstAdd', `Permanent Address`='$permAdd' WHERE `Student ID` = '$id'";
+        $insertQuery = "UPDATE `student_details` SET `Name`='$name', `Class`='$class', `Gender`='$gender', `Blood Group`='$blood', `DOB`='$dob', `Email`='$email', `Admission Number`=$admNum, `Admission Date`='$addDate', `Religion`='$religion', `Nationality`='$nationality', `Father Name`='$fatherName', `Father Occupation`='$fatherOcc', `Father PhoneNum`='$fatherNum', `Mother Name`='$motherName', `Mother Occupation`='$motherOcc', `Mother PhoneNum`='$motherNum', `Present Address`='$prstAdd', `Permanent Address`='$permAdd' WHERE `Student ID` = '$id'";
 
         $query = mysqli_query($conn, $insertQuery);
 
@@ -267,12 +267,12 @@
                                         <input type="email" name="Email" class="form-control" id="Email" value="<?php echo $res['Email']; ?>">
                                     </div>
                                     <div class="form-group col-md-3">
-                                        <label for="AdmissionNum">Addmission Number</label>
-                                        <input type="number" name="AdmNum" class="form-control" id="AdmNum" value="<?php echo $res['Addmission Number']; ?>" required>
+                                        <label for="AdmissionNum">Admission Number</label>
+                                        <input type="number" name="AdmNum" class="form-control" id="AdmNum" value="<?php echo $res['Admission Number']; ?>" required>
                                     </div>
                                     <div class="form-group col-md-3">
-                                        <label for="AdmissionDate">Addmission Date</label>
-                                        <input type="date" name="AdmDate" class="form-control" id="AdmDate" value="<?php echo $res['Addmission Date']; ?>" required>
+                                        <label for="AdmissionDate">Admission Date</label>
+                                        <input type="date" name="AdmDate" class="form-control" id="AdmDate" value="<?php echo $res['Admission Date']; ?>" required>
                                     </div>
                                 </div>
                                 <div class="form-row">
