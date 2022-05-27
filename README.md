@@ -1,9 +1,9 @@
 # Student Information Management System
 ## Overview
-Student Information Management System (SIMS) is a fully computerized system or a database where all the student related data can be stored, retrieved, monitored & analysed. The data is saved at a centralized location & role-based login access is given to all the users for ensuring student data security.   
+Student Information Management System (SIMS) is a fully computerized system or a database where all the student related data can be stored, retrieved, monitored & analysed. The data is saved at a centralized location & role-based login access is given to all the users for ensuring student data security.
 Our 'Student Information Management System' aids in managing, storing, data such as admission number, tracking attendance, exam & test marks, notice board, teacher info, subject info and other student related data. The system gives both the student and teacher an overall view of the ongoing academic activities.
 ## PROBLEM STATEMENT
-Students form the main part of any institution that concerns with. But the institution finds it difficult to keep the details of all the students. Thus, it involves a lot of paper work. Sometimes there will be huge heap of files bundled up and must be stored in some corner of the office.   
+Students form the main part of any institution that concerns with. But the institution finds it difficult to keep the details of all the students. Thus, it involves a lot of paper work. Sometimes there will be huge heap of files bundled up and must be stored in some corner of the office.
 Managing student records manually is a troublesome job, this increases as the number of students increases. This method may lead to missing or destroying important information and is also difficult to maintain. Since this method of managing student data is outdated, we propose a better way, i.e., using a computer software which can automate most of the work in maintaining such records.
 ## TECHNOLOGY
 * **HTML** is used for the front-end design. It provides a means to structure text-based information in a document. It allows users to produce web pages that include text, graphics and hyperlinks.
@@ -36,9 +36,21 @@ The resulting system is able to:
 ### RELATIONAL SCHEMA
 ![Relational schema](image/ER%20Mapping.png)
 
-For screenshots and more details about the project, please checkout [Final Report](Final-Report.pdf)  
+For screenshots and more details about the project, please checkout [Final Report](Final-Report.pdf)
 ## Software Requirements
-* [XAMPP](https://www.apachefriends.org/index.html) 
+* [XAMPP](https://www.apachefriends.org/index.html)
 * Browser of your choice
+
+## Steps to run the project
+- Install XAMPP on your local machine.
+- Clone the project using
+    ```console
+    $ git clone https://github.com/Thirumalai-Shaktivel/Student_Information_Management_System.git
+    ```
+- Remove the contents of htdocs (xampp), and add all the items from the project which were cloned before.
+- Start the Apache and MySQL servers.
+- Create a database named `student details(mini project)`
+- Now, just import the sql file i.e., [student_details_mini_project_.sql](resource/student_details_mini_project_.sql)
+- Goto: `https:\\http://localhost/`
 
 If you have any doubt related to this project, feel free to contact me on [twitter](https://twitter.com/sh0ck_thi) or [mail](mailto:thirumalaishaktivel@gmail.com) me.
