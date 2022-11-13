@@ -34,9 +34,42 @@ The resulting system is able to:
     - View the Attendance details.
 
 ### RELATIONAL SCHEMA
-![Relational schema](image/ER%20Mapping.png)
+<p align="center">
+    <img src="image/ER%20Mapping.png" alt="Relational schema" width=75%/>
+</p>
 
-For screenshots and more details about the project, please checkout [Final Report](Final-Report.pdf)
+## Snapshots
+### Teacher View
+---
+<p align="center">
+    <img src="image\Snapshots\Welcome_page.png" alt="Welcome_page" width=49%/>
+    <img src="image\Snapshots\Login.png" alt="Login" width=49%/> <br><br>
+    <img src="image\Snapshots\Register.png" alt="Register" width=49%/>
+    <img src="image\Snapshots\Home_page.png" alt="Home_page" width=49%/><br><br>
+    <img src="image\Snapshots\Student_list.png" alt="Student_list" width=49%/>
+    <img src="image\Snapshots\Search_student.png" alt="Search_student" width=49%/><br><br>
+    <img src="image\Snapshots\View_student_details.png" alt="View_student_details" width=49%/>
+    <img src="image\Snapshots\Admit_student.png" alt="Admit_student" width=49%/><br><br>
+    <img src="image\Snapshots\Subject_details.png" alt="Subject_details" width=49%/>
+    <img src="image\Snapshots\Edit_subject_details.png" alt="Edit_subject_details" width=49%/><br><br>
+    <img src="image\Snapshots\Announcement_page.png" alt="Announcement_page" width=49%/>
+    <img src="image\Snapshots\Attendance_page.png" alt="Attendance_page" width=49%/><br><br>
+    <img src="image\Snapshots\Internals_marks_page.png" alt="Internals_marks_page" width=49%/>
+    <img src="image\Snapshots\Exam_marks_page.png" alt="Exam_marks_page" width=49%/><br><br>
+</p>
+
+### Student View
+---
+<p align="center">
+    <img src="image\Snapshots\Home_page_.png" alt="Home_page_" width=49%/>
+    <img src="image\Snapshots\Subject_details_.png" alt="Subject_details_" width=49%/><br><br>
+    <img src="image\Snapshots\Announcement_page_.png" alt="Announcement_page_" width=49%/>
+    <img src="image\Snapshots\Attendance_page_.png" alt="Attendance_page_" width=49%/><br><br>
+    <img src="image\Snapshots\Internals_marks_page_.png" alt="Internals_marks_page_" width=49%/>
+    <img src="image\Snapshots\Exam_marks_page_.png" alt="Exam_marks_page_" width=49%/><br><br>
+</p>
+
+For more details about the project, please checkout [Final Report](Final-Report.pdf)
 ## Software Requirements
 * [XAMPP](https://www.apachefriends.org/index.html)
 * Browser of your choice
@@ -50,7 +83,11 @@ For screenshots and more details about the project, please checkout [Final Repor
 - Remove the contents of htdocs (xampp), and add all the items from the project which were cloned before.
 - Start the Apache and MySQL servers.
 - Create a database named `student details(mini project)`
-- Now, just import the sql file i.e., [student_details_mini_project_.sql](resource/student_details_mini_project_.sql)
-- Goto: `https:\\http://localhost/`
-
+- Now, just [import the table contents](https://help.one.com/hc/en-us/articles/115005588189-How-do-I-import-a-database-to-phpMyAdmin-) using [student_details_mini_project_.sql](resource/student_details_mini_project_.sql)
+- Goto: `https://localhost/`
+- Testing login details (teacher):
+    ```
+    Name:     Thirumalai
+    Password: 123456789
+    ```
 If you have any doubt related to this project, feel free to contact me on [twitter](https://twitter.com/sh0ck_thi) or [mail](mailto:thirumalaishaktivel@gmail.com) me.

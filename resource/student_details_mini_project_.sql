@@ -316,7 +316,7 @@ CREATE TABLE `teacher_user` (
 --
 
 INSERT INTO `teacher_user` (`ID`, `USERNAME`, `PASSWORD`) VALUES
-(3, 'kanaka', '$2y$10$G7Teg4ss2rWBLia02uXxc.w.orm.t6LB7XyBP8A3qJH/k6qRQSflW');
+(3, 'Thirumalai', '$2y$10$G7Teg4ss2rWBLia02uXxc.w.orm.t6LB7XyBP8A3qJH/k6qRQSflW');
 
 --
 -- Indexes for dumped tables
